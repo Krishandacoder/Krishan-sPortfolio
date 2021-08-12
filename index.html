@@ -7,7 +7,20 @@
 </head>
 <body>
     <header>
-        <img src="krishan_picture.PNG" style="border-radius: 50%; width: 20vw; height: auto">
+        <img id="myiconimagethatmoves" src="krishan_picture.PNG" style="border-radius: 50%; width: 20vw; height: auto" onmouseover="changeimage()" onmouseout="originalimage()">
+        <script>
+            function changeimage(){
+                myiconimagethatmoves.style.border="5px dashed orange";
+                myiconimagethatmoves.style.width="30%";
+                myiconimagethatmoves.style.height="auto";
+            }
+
+            function originalimage(){
+                myiconimagethatmoves.style.border="0px solid transparent";
+                myiconimagethatmoves.style.width="20vw";
+                myiconimagethatmoves.style.height="auto";
+            }
+        </script>
         <h1 style="font-family:Calibri;font-size: 475%;">
             Krishan's portfolio
         </h1>

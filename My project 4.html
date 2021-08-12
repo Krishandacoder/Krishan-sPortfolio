@@ -4,10 +4,12 @@
 <title>About Me</title>
 <link rel="stylesheet" href="mainstyle.css">
 <link rel="icon" href="krishan_picture.PNG">
+
 </head>
+
 <body>
-<header>
-</header>
+
+
 
 
 <h1 style="background-color:violet;text-align:center;font-family:Bradley Hand ITC;border:rgb(223, 223, 223) 10px dashed"> </h1>
@@ -21,7 +23,14 @@
     <a href="Projectfeedback.html" style="color:black;">Feedback for website</a>
 </nav>
 <h3 style="background-color:orange;text-align:center;font-family:Bradley Hand ITC;">I live in Bellevue, Washington, USA</h3> 
-<img src="Capture.PNG" style="width: 100%;height:auto;margin-bottom: 2%;">
+<img id="PictureofBellevueDowntown" src="Capture.PNG" style="width: 100%;height:auto;margin-bottom: 2%;">
+<button onclick="hoho()">Click to change image</button>
+
+<script>
+    function hoho(){
+        PictureofBellevueDowntown.src="bellevue.JPG";
+    }
+</script>
 <p style="font-size:150%;"> This is the area of where I live in
     <br>
     Click on any city to learn more about them.
@@ -88,5 +97,6 @@ Sports I like:
 <p>I also like Indian songs</p>
 <div class="fixed-container">
     <footer style="text-align:center;"><details>Made by Krishan Dhawan <summary>Copyright 2021:</summary></details></footer></div>
+
 </body>
 </html>
