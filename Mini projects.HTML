@@ -4,6 +4,12 @@
     <title>Home</title>
     <link rel="stylesheet" href="mainstyle.css">
     <link rel="icon" href="krishan_picture.PNG">
+    <script>
+        var num=Math.random()*100;
+        console.log(num)
+        var chosennumber=Math.floor(num)
+        console.log(chosennumber)
+    </script>
 </head>
 <body>
     <header>
@@ -23,7 +29,7 @@
             }
         </script>
         <h1 style="font-family:Calibri;font-size: 475%;">
-            Krishan's portfolio
+            My mini projects
         </h1>
     </header>
     <br>
@@ -52,16 +58,26 @@
         <a href="Projectfeedback.html" style="color:black;">Feedback for website</a>
         <a href="Mini projects.HTML" style="color:black">My mini projects</a>
     </nav>
-    <h2 style="font-family: Calibri;">Hi my name is Krishan and this is my portfolio. <br>In this website, you will learn a bit more about me. I have included many things like my favorite sport.</h2>
-    <section class="maindiv" style="font-size: larger;">
-        <aside class="leftdiv">
-            <article class="content" >There is one of the webpages that shows a bit <a href="My project 4.html">about me.</a></article>
-        </aside>
-        <aside class="rightdiv">
-            <article class="content">The other webpage shows <a href="My project 4.5.html">my cricket.</a></article>
-        </aside>
-    </section>
+
+    <fieldset style="margin:20px;">
+    <h2>Number guessing game</h2>
+    <p>Pick a number between 1 to 100</p>
+    <label for="num">Guess the number</label>
+    <input type="number" id="num">
+    <button type="button" onclick="checkuserguess()">Submit</button>
+    <p id="results"></p>
+    <script>
+        function checkuserguess(){
+            var guessednum=parseInt(document.getElementById("num").value);
+            if(guessednum==chosennumber){
+                document.getElementById("results").innerHTML="Yay you got the number!!";
+            }
+            else{
+                document.getElementById("results").innerHTML="You did not get it but you can try again"+guessednum+" "+chosennumber;
+            }
+        }
+    </script>
+    </fieldset>
     <div class="fixed-container">
-    <footer style="text-align:center;"><details>Made by Krishan Dhawan <summary>Copyright 2021:</summary></details></footer></div>
+        <footer style="text-align:center;"><details>Made by Krishan Dhawan <summary>Copyright 2021:</summary></details></footer></div>
 </body>
-</html>

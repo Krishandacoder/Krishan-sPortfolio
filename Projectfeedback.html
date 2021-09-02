@@ -7,7 +7,21 @@
 </head>
 <body>
 <header>
-<img src="krishan_picture.PNG" style="border-radius: 50%; width: 20vw; height: auto">
+    <img id="myiconimagethatmoves" src="krishan_picture.PNG" style="border-radius: 50%; width: 20vw; height: auto" onmouseover="changeimage()" onmouseout="originalimage()">
+    <script>
+        function changeimage(){
+            myiconimagethatmoves.style.border="5px dashed orange";
+            myiconimagethatmoves.style.width="30%";
+            myiconimagethatmoves.style.height="auto";
+        }
+
+        function originalimage(){
+            myiconimagethatmoves.style.transition="5s";
+            myiconimagethatmoves.style.border="0px solid transparent";
+            myiconimagethatmoves.style.width="20vw";
+            myiconimagethatmoves.style.height="auto";
+        }
+    </script>
 <h1 style="font-family:Calibri;">
 Krishan's portfolio feedback form
 </h1>
@@ -32,23 +46,25 @@ Krishan's portfolio feedback form
     <br>
     <br>
 
-<nav style="width: 60%;">
-<a href="index.html" style="color:black;">Home</a>
-<a href="My project 4.html" style="color:black;">About me</a>
-<a href="My project 4.5.html" style="color:black;">Cricket Information</a>
-<a href="Projectfeedback.html" style="color:black;">Feedback for website</a>
-</nav>
+    <nav style="width: 60%;">
+        <a href="index.html" style="color:black;">Home</a>
+        <a href="My project 4.html" style="color:black;">About me</a>
+        <a href="My project 4.5.html" style="color:black;">Cricket Information</a>
+        <a href="Projectfeedback.html" style="color:black;">Feedback for website</a>
+        <a href="Mini projects.HTML" style="color:black">My mini projects</a>
+    </nav>
 
 <form action="mailto:kripadhawan@outlook.com" name="FORM" method="POST" enctype="text/plain">Feedback form
 <br><br>
 <label for="F-name">First Name</label>
-<input type="text" id="F-name" name="F-name>
+<input type="text" id="F-name" name="F-name" onkeypress="bgchange()" onkeyup="bgbacktonormal()">
+
 <br><br>
 <label for="L-name">Last Name</label>
-<input type="text" id="L-name" name="L-name">
+<input type="text" id="L-name" name="L-name" onkeypress="bgchangef()" onkeyup="bgbacktonormalf()">
 <br><br>
 <label for="E-mail ID">E-mail ID</label>
-<input type="email" id="E-mail ID" name="E-mail ID">
+<input type="email" id="E-mail ID" name="E-mail ID" onkeypress="bgchangel()" onkeyup="bgbacktonormall()">
 <br><br>
 <fieldset><legend>Gender</legend>
 <label for="Male">Male</label>
@@ -102,6 +118,29 @@ Krishan's portfolio feedback form
         alert("We are going to redirect");
         window.location="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
+    }
+</script>
+<script>
+    function bgchange(){
+        document.getElementById("F-name").style.backgroundColor="cyan";
+    }
+    function bgbacktonormal(){
+        document.getElementById("F-name").style.backgroundColor="white";
+    
+    }
+    function bgchangef(){
+        document.getElementById("L-name").style.backgroundColor="cyan";
+    }
+    function bgbacktonormalf(){
+        document.getElementById("L-name").style.backgroundColor="white";
+    
+    }
+    function bgchangel(){
+        document.getElementById("E-mail ID").style.backgroundColor="cyan";
+    }
+    function bgbacktonormall(){
+        document.getElementById("E-mail ID").style.backgroundColor="white";
+    
     }
 </script>
 
