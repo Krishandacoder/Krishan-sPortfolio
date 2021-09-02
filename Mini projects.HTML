@@ -6,9 +6,9 @@
     <link rel="icon" href="krishan_picture.PNG">
     <script>
         var num=Math.random()*100;
-        console.log(num)
-        var chosennumber=Math.floor(num)
-        console.log(chosennumber)
+        console.log(num);                               
+        var chosennumber=Math.floor(num);
+        console.log(chosennumber);
     </script>
 </head>
 <body>
@@ -70,14 +70,15 @@
         function checkuserguess(){
             var guessednum=parseInt(document.getElementById("num").value);
             var gameon=true;
-            while(gameon){
             if(guessednum==chosennumber){
                 document.getElementById("results").innerHTML="Yay you got the number!!";
-            gameon=false;
+            
             }
             else{
-                document.getElementById("results").innerHTML="You did not get it, try again";
-            }}
+                document.getElementById("results").innerHTML="You did not get it, but you can try again";
+                console.log(chosennumber);
+                
+            }
             
         }
     </script>
