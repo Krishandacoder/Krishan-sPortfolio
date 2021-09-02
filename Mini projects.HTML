@@ -69,12 +69,16 @@
     <script>
         function checkuserguess(){
             var guessednum=parseInt(document.getElementById("num").value);
+            var gameon=true;
+            while(gameon){
             if(guessednum==chosennumber){
                 document.getElementById("results").innerHTML="Yay you got the number!!";
+            gameon=false;
             }
             else{
-                document.getElementById("results").innerHTML="You did not get it but you can try again"+guessednum+" "+chosennumber;
-            }
+                document.getElementById("results").innerHTML="You did not get it but you can try again";
+            }}
+            
         }
     </script>
     </fieldset>
