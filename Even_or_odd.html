@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Even or odd</title>
+</head>
+<body id="body">
+    <input type="number" id="number">
+    <button onclick="evensorodds()">checkbox</button>
+    <script>
+        function evensorodds(){
+            var num=document.getElementById("number").value;
+            var x=document.createElement("p");
+            if(num%2==0){
+                x.innerHTML="even";
+            }
+            else if(num%2==1){
+                x.innerHTML="odd";
+            }
+            document.getElementById("body").appendChild(x);
+        }
+    </script>
+</body>
+</html>
