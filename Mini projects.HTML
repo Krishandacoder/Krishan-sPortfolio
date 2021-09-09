@@ -59,6 +59,8 @@
         <a href="Mini projects.HTML" style="color:black">My mini projects</a>
     </nav>
 
+    <h2>Greetings</h2>
+    <p id="Greetings" ></p>
     <fieldset style="margin:20px;">
     <h2>Number guessing game</h2>
     <p>Pick a number between 1 to 100</p>
@@ -66,10 +68,30 @@
     <input type="number" id="num">
     <button type="button" onclick="checkuserguess()">Submit</button>
     <p id="results"></p>
+    </fieldset>
+    <fieldset style="margin:20px;">
+    <h2>Multiplication calculator</h2>
+    <p>Enter 2 numbers and then press the button to see what happens</p>
+    <label for="firstuserinput">Enter one factor here:</label>
+    <input type="number" id="firstuserinput">
+    <br>
+    <label for="seconduserinput">Enter another factor here:</label>
+    <input type="number" id="seconduserinput">
+    <br>
+    <button type="button" onclick="multiplyandsubmit()">Calculate</button>
+    <p id="product"></p>
+    </fieldset>
+    <fieldset>
+        <h2>Multiplication table</h2>
+        <label for="inputfromuser">Pick a number</label>
+        <input type="number" id=inputfromuser>
+        <br>
+        <button type="button" onclick="table()">Generate multiplication table</button>
+        <p id="result"></p>
+    </fieldset>
     <script>
         function checkuserguess(){
             var guessednum=parseInt(document.getElementById("num").value);
-            var gameon=true;
             if(guessednum==chosennumber){
                 document.getElementById("results").innerHTML="Yay you got the number!!";
             
@@ -81,8 +103,43 @@
             }
             
         }
+        function getdatatime(){
+            var today=new Date();
+            var currenthour=today.getHours();
+            var message="";
+            if (currenthour>=5 && currenthour<=11){
+                message="Good morning, rise and shine!";
+            }
+            else if (currenthour>=12 && currenthour<=15){
+                message="Good afternoon!";
+            }
+            else if (currenthour>=16 && currenthour<=22){
+                message="Good evening!";
+            }
+            else if (currenthour>=23 || currenthour<=4){
+                message="Good night!";
+            }
+            
+            document.getElementById("Greetings").innerHTML=message+" the time is " +today.toLocaleString() ;
+        }
+        setInterval(getdatatime, 1000);
+        function multiplyandsubmit(){
+            var firstnum=parseInt(document.getElementById("firstuserinput").value);
+            var secondnum=parseInt(document.getElementById("seconduserinput").value);
+            var calculatedvalue=firstnum;
+            calculatedvalue*=secondnum;
+            document.getElementById("product").innerHTML="The calculated value is:- " + calculatedvalue;
+        }
+        function table(){
+            var onenumber=parseInt(document.getElementById("inputfromuser").value);
+            var newnum=0
+            document.getElementById("result").innerHTML="";
+            for(var i=1; i<=10; i++){
+                newnum=onenumber*i;
+                document.getElementById("result").innerHTML+=newnum + " ";
+            }
+        }
     </script>
-    </fieldset>
     <div class="fixed-container">
         <footer style="text-align:center;"><details>Made by Krishan Dhawan <summary>Copyright 2021:</summary></details></footer></div>
 </body>
