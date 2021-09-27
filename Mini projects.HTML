@@ -9,6 +9,9 @@
         console.log(num);                               
         var chosennumber=Math.floor(num);
         console.log(chosennumber);
+        var names=["Jack", "Max", "Liam", "Kaden", "Zach", "James", "John", "William", "David", "Braden", "Daniel", "Kevin", "Jacob"];
+        var chosenword=names[Math.floor(Math.random()*5)];
+        console.log(chosenword);
     </script>
 </head>
 <body>
@@ -55,9 +58,10 @@
         <a href="index.html" style="color:black;">Home</a>
         <a href="My project 4.html" style="color:black;">About me</a>
         <a href="My project 4.5.html" style="color:black;">Cricket Information</a>
-        <a href="Projectfeedback.html" style="color:black;">Feedback for website</a>
         <a href="Mini projects.HTML" style="color:black">My mini projects</a>
+        <a href="Projectfeedback.html" style="color:black;">Feedback for website</a>
     </nav>
+    <button onclick="location.reload()">Refresh Page</button>
 
     <h2>Greetings</h2>
     <p id="Greetings" ></p>
@@ -69,27 +73,66 @@
     <button type="button" onclick="checkuserguess()">Submit</button>
     <p id="results"></p>
     </fieldset>
+    <br>
+    <br>
+
     <fieldset style="margin:20px;">
     <h2>Multiplication calculator</h2>
     <p>Enter 2 numbers and then press the button to see what happens</p>
     <label for="firstuserinput">Enter one factor here:</label>
     <input type="number" id="firstuserinput">
-    <br>
+    <br><br>
     <label for="seconduserinput">Enter another factor here:</label>
     <input type="number" id="seconduserinput">
-    <br>
+    <br><br>
     <button type="button" onclick="multiplyandsubmit()">Calculate</button>
     <p id="product"></p>
     </fieldset>
+    <br>
+    <br>
     <fieldset>
         <h2>Multiplication table</h2>
         <label for="inputfromuser">Pick a number</label>
         <input type="number" id=inputfromuser>
-        <br>
+        <br><br>
         <button type="button" onclick="table()">Generate multiplication table</button>
         <p id="result"></p>
     </fieldset>
+    <br>
+    <br>
+
+    <fieldset id="primenumberchecker">
+        <h2>Prime or composite number checker</h2>
+        <label for="usersinputtocheck">Enter a number</label>
+        <input type="number" id="usersinputtocheck">
+        <br>
+        <br>
+        <button type="button" onclick="primenumchecker()">Check if number is prime of composite</button>
+        <p id="primeorcomposite"></p>
+    </fieldset>
+    <br>
+    <br>
+    <fieldset>
+        <h2>Name guessing game</h2>
+        <p>Names: Jack, Max, Liam, Kaden, Zach, James, John, William, David, Braden, Daniel, Kevin, Jacob</p>
+        <label for="name">Enter a name</label>
+        <input type="text" id="name">
+        <br>
+        <br>
+        <button type="button" onclick="checkname()">Check the entered name</button>
+        
+        <p id="givennameresults"></p>
+    </fieldset>
     <script>
+        function checkname(){
+            var usergivenname=document.getElementById("name").value;
+            if (usergivenname==chosenword){
+                document.getElementById("givennameresults").innerHTML="You chose the right name!"
+            }
+            else{
+                document.getElementById("givennameresults").innerHTML="You did not get the right name. Try again"
+            }
+        }
         function checkuserguess(){
             var guessednum=parseInt(document.getElementById("num").value);
             if(guessednum==chosennumber){
@@ -103,6 +146,7 @@
             }
             
         }
+    
         function getdatatime(){
             var today=new Date();
             var currenthour=today.getHours();
@@ -124,19 +168,35 @@
         }
         setInterval(getdatatime, 1000);
         function multiplyandsubmit(){
-            var firstnum=parseInt(document.getElementById("firstuserinput").value);
-            var secondnum=parseInt(document.getElementById("seconduserinput").value);
+            var firstnum=parseFloat(document.getElementById("firstuserinput").value);
+            var secondnum=parseFloat(document.getElementById("seconduserinput").value);
             var calculatedvalue=firstnum;
             calculatedvalue*=secondnum;
             document.getElementById("product").innerHTML="The calculated value is:- " + calculatedvalue;
         }
+        
         function table(){
-            var onenumber=parseInt(document.getElementById("inputfromuser").value);
+            var onenumber=parseFloat(document.getElementById("inputfromuser").value);
             var newnum=0
             document.getElementById("result").innerHTML="";
             for(var i=1; i<=10; i++){
                 newnum=onenumber*i;
-                document.getElementById("result").innerHTML+=newnum + " ";
+                document.getElementById("result").innerHTML+=newnum + ", ";
+            }
+        }
+        function primenumchecker(){
+            var usernum=parseInt(document.getElementById("usersinputtocheck").value);
+            var num=0
+            for(var i=2; i<usernum; i++){
+                if (usernum%i==0){
+                    num++;
+                }   
+            }
+            if(num>=1){
+                document.getElementById("primeorcomposite").innerHTML="It is a composite number and it is divisble by " + num + " different numbers other than 1 and " + usernum;
+            }
+            else if (num==0){
+                document.getElementById("primeorcomposite").innerHTML="It is a prime number";
             }
         }
     </script>
