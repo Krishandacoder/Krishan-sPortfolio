@@ -28,8 +28,18 @@
 <button onclick="changepic()">Click to change image</button>
 
 <script>
+    var mynumber=0
     function changepic(){
+        if (mynumber%2==0){
         document.getElementById("PictureofBellevueDowntown").src="bellevue.jpg";
+        }
+        else {
+            document.getElementById("PictureofBellevueDowntown").src="Capture.PNG"
+        }
+        mynumber+=1
+        
+        
+
     }
 </script>
 <p style="font-size:150%;"> This is the area of where I live in
