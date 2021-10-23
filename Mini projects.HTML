@@ -1,205 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="mainstyle.css">
-    <link rel="icon" href="krishan_picture.PNG">
-    <script>
-        var num=Math.random()*100;
-        console.log(num);                               
-        var chosennumber=Math.floor(num);
-        console.log(chosennumber);
-        var names=["Jack", "Max", "Liam", "Kaden", "Zach", "James", "John", "William", "David", "Braden", "Daniel", "Kevin", "Jacob"];
-        var chosenword=names[Math.floor(Math.random()*12)];
-        console.log(chosenword);
-    </script>
+<title>Home</title>
+<link rel="stylesheet" href="mainstyle.css">
+<link rel="icon" href="krishan_picture.PNG">
+<script>
+var num=Math.random()*100;
+console.log(num);                               
+var chosennumber=Math.floor(num);
+console.log(chosennumber);
+var names=["Jack", "Max", "Liam", "Kaden", "Zach", "James", "John", "William", "David", "Braden", "Daniel", "Kevin", "Jacob"];
+var chosenword=names[Math.floor(Math.random()*12)];
+console.log(chosenword);
+</script>
 </head>
 <body>
-    <header>
-        <img id="myiconimagethatmoves" src="krishan_picture.PNG" style="border-radius: 50%; width: 20vw; height: auto" onmouseover="changeimage()" onmouseout="originalimage()">
-        <script>
-            function changeimage(){
-                myiconimagethatmoves.style.border="5px dashed orange";
-                myiconimagethatmoves.style.width="30%";
-                myiconimagethatmoves.style.height="auto";
-            }
+<header>
+<img id="myiconimagethatmoves" src="krishan_picture.PNG" style="border-radius: 50%; width: 20vw; height: auto" onmouseover="changeimage()" onmouseout="originalimage()">
+<script>
+function changeimage(){
+myiconimagethatmoves.style.border="5px dashed orange";
+myiconimagethatmoves.style.width="30%";
+myiconimagethatmoves.style.height="auto";
+}
 
-            function originalimage(){
-                myiconimagethatmoves.style.transition="5s";
-                myiconimagethatmoves.style.border="0px solid transparent";
-                myiconimagethatmoves.style.width="20vw";
-                myiconimagethatmoves.style.height="auto";
-            }
-        </script>
-        <h1 style="font-family:Calibri;font-size: 475%;">
-            My mini projects
-        </h1>
-    </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <nav style="width: 60%;">
-        <a href="index.html" style="color:black;">Home</a>
-        <a href="My project 4.html" style="color:black;">About me</a>
-        <a href="My project 4.5.html" style="color:black;">Cricket Information</a>
-        <a href="Mini projects.HTML" style="color:black">My mini projects</a>
-        <a href="Projectfeedback.html" style="color:black;">Feedback for website</a>
-    </nav>
-    <button onclick="location.reload()">Refresh Page</button>
+function originalimage(){
+myiconimagethatmoves.style.transition="5s";
+myiconimagethatmoves.style.border="0px solid transparent";
+myiconimagethatmoves.style.width="20vw";
+myiconimagethatmoves.style.height="auto";
+}
+</script>
+<h1 style="font-family:Calibri;font-size: 475%;">
+My mini projects
+</h1>
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<nav style="width: 60%;">
+<a href="index.html" style="color:black;">Home</a>
+<a href="My project 4.html" style="color:black;">About me</a>
+<a href="My project 4.5.html" style="color:black;">Cricket Information</a>
+<a href="Mini projects.HTML" style="color:black">My mini projects</a>
+<a href="Projectfeedback.html" style="color:black;">Feedback for website</a>
+</nav>
+<button onclick="location.reload()">Refresh Page</button>
 
-    <h2>Greetings</h2>
-    <p id="Greetings" ></p>
-    <fieldset style="margin:20px;">
-    <h2>Number guessing game</h2>
-    <p>Pick a number between 1 to 100</p>
-    <label for="num">Guess the number</label>
-    <input type="number" id="num">
-    <button type="button" onclick="checkuserguess()">Submit</button>
-    <p id="results"></p>
-    </fieldset>
-    <br>
-    <br>
+<h2>Greetings</h2>
+<p id="Greetings" ></p>
+<fieldset style="margin:20px;">
+<h2>Number guessing game</h2>
+<p>Pick a number between 1 to 100</p>
+<label for="num">Guess the number</label>
+<input type="number" id="num">
+<button type="button" onclick="checkuserguess()">Submit</button>
+<p id="results"></p>
+</fieldset>
+<br>
+<br>
 
-    <fieldset style="margin:20px;">
-    <h2>Multiplication calculator</h2>
-    <p>Enter 2 numbers and then press the button to see what happens</p>
-    <label for="firstuserinput">Enter one factor here:</label>
-    <input type="number" id="firstuserinput">
-    <br><br>
-    <label for="seconduserinput">Enter another factor here:</label>
-    <input type="number" id="seconduserinput">
-    <br><br>
-    <button type="button" onclick="multiplyandsubmit()">Calculate</button>
-    <p id="product"></p>
-    </fieldset>
-    <br>
-    <br>
-    <fieldset>
-        <h2>Multiplication table</h2>
-        <label for="inputfromuser">Pick a number</label>
-        <input type="number" id=inputfromuser>
-        <br><br>
-        <button type="button" onclick="table()">Generate multiplication table</button>
-        <p id="result"></p>
-    </fieldset>
-    <br>
-    <br>
+<fieldset style="margin:20px;">
+<h2>Multiplication calculator</h2>
+<p>Enter 2 numbers and then press the button to see what happens</p>
+<label for="firstuserinput">Enter one factor here:</label>
+<input type="number" id="firstuserinput">
+<br><br>
+<label for="seconduserinput">Enter another factor here:</label>
+<input type="number" id="seconduserinput">
+<br><br>
+<button type="button" onclick="multiplyandsubmit()">Calculate</button>
+<p id="product"></p>
+</fieldset>
+<br>
+<br>
+<fieldset>
+<h2>Multiplication table</h2>
+<label for="inputfromuser">Pick a number</label>
+<input type="number" id=inputfromuser>
+<br><br>
+<button type="button" onclick="table()">Generate multiplication table</button>
+<p id="result"></p>
+</fieldset>
+<br>
+<br>
 
-    <fieldset id="primenumberchecker">
-        <h2>Prime or composite number checker</h2>
-        <label for="usersinputtocheck">Enter a number</label>
-        <input type="number" id="usersinputtocheck">
-        <br>
-        <br>
-        <button type="button" onclick="primenumchecker()">Check if number is prime of composite</button>
-        <p id="primeorcomposite"></p>
-    </fieldset>
-    <br>
-    <br>
-    <fieldset>
-        <h2>Name guessing game</h2>
-        <p>Names: Jack, Max, Liam, Kaden, Zach, James, John, William, David, Braden, Daniel, Kevin, Jacob</p>
-        <label for="name">Enter a name</label>
-        <input type="text" id="name">
-        <br>
-        <br>
-        <button type="button" onclick="checkname()">Check the entered name</button>
-        
-        <p id="givennameresults"></p>
-    </fieldset>
-    <script>
-        function checkname(){
-            var usergivenname=document.getElementById("name").value;
-            if (usergivenname==chosenword){
-                document.getElementById("givennameresults").innerHTML="You chose the right name!"
-            }
-            else{
-                document.getElementById("givennameresults").innerHTML="You did not get the right name. Try again"
-            }
-        }
-        function checkuserguess(){
-            var guessednum=parseInt(document.getElementById("num").value);
-            if(guessednum==chosennumber){
-                document.getElementById("results").innerHTML="Yay you got the number!!";
-            
-            }
-            else{
-                document.getElementById("results").innerHTML="You did not get it, but you can try again";
-                console.log(chosennumber);
-                
-            }
-            
-        }
-    
-        function getdatatime(){
-            var today=new Date();
-            var currenthour=today.getHours();
-            var message="";
-            if (currenthour>=5 && currenthour<=11){
-                message="Good morning, rise and shine!";
-            }
-            else if (currenthour>=12 && currenthour<=15){
-                message="Good afternoon!";
-            }
-            else if (currenthour>=16 && currenthour<=22){
-                message="Good evening!";
-            }
-            else if (currenthour>=23 || currenthour<=4){
-                message="Good night!";
-            }
-            
-            document.getElementById("Greetings").innerHTML=message+" the time is " +today.toLocaleString() ;
-        }
-        setInterval(getdatatime, 1000);
-        function multiplyandsubmit(){
-            var firstnum=parseFloat(document.getElementById("firstuserinput").value);
-            var secondnum=parseFloat(document.getElementById("seconduserinput").value);
-            var calculatedvalue=firstnum;
-            calculatedvalue*=secondnum;
-            document.getElementById("product").innerHTML="The calculated value is:- " + calculatedvalue;
-        }
-        
-        function table(){
-            var onenumber=parseFloat(document.getElementById("inputfromuser").value);
-            var newnum=0
-            document.getElementById("result").innerHTML="";
-            for(var i=1; i<=10; i++){
-                newnum=onenumber*i;
-                document.getElementById("result").innerHTML+=newnum + ", ";
-            }
-        }
-        function primenumchecker(){
-            var usernum=parseInt(document.getElementById("usersinputtocheck").value);
-            var num=0
-            for(var i=2; i<usernum; i++){
-                if (usernum%i==0){
-                    num++;
-                }   
-            }
-            if(num>=1){
-                document.getElementById("primeorcomposite").innerHTML="It is a composite number and it is divisble by " + num + " different numbers other than 1 and " + usernum;
-            }
-            else if (num==0){
-                document.getElementById("primeorcomposite").innerHTML="It is a prime number";
-            }
-        }
-    </script>
-    <div class="fixed-container">
-        <footer style="text-align:center;"><details>Made by Krishan Dhawan <summary>Copyright 2021:</summary></details></footer></div>
+<fieldset id="primenumberchecker">
+<h2>Prime or composite number checker</h2>
+<label for="usersinputtocheck">Enter a number</label>
+<input type="number" id="usersinputtocheck">
+<br>
+<br>
+<button type="button" onclick="primenumchecker()">Check if number is prime of composite</button>
+<p id="primeorcomposite"></p>
+</fieldset>
+<br>
+<br>
+<fieldset>
+<h2>Name guessing game</h2>
+<p>Names: Jack, Max, Liam, Kaden, Zach, James, John, William, David, Braden, Daniel, Kevin, Jacob</p>
+<label for="name">Enter a name</label>
+<input type="text" id="name">
+<br>
+<br>
+<button type="button" onclick="checkname()">Check the entered name</button>
+
+<p id="givennameresults"></p>
+</fieldset>
+<script>
+function checkname(){
+var usergivenname=document.getElementById("name").value;
+if (usergivenname==chosenword){
+document.getElementById("givennameresults").innerHTML="You chose the right name!"
+}
+else{
+document.getElementById("givennameresults").innerHTML="You did not get the right name. Try again"
+}
+}
+function checkuserguess(){
+var guessednum=parseInt(document.getElementById("num").value);
+if(guessednum==chosennumber){
+document.getElementById("results").innerHTML="Yay you got the number!!";
+
+}
+else{
+document.getElementById("results").innerHTML="You did not get it, but you can try again";
+console.log(chosennumber);
+
+}
+
+}
+
+function getdatatime(){
+var today=new Date();
+var currenthour=today.getHours();
+var message="";
+if (currenthour>=5 && currenthour<=11){
+message="Good morning, rise and shine!";
+}
+else if (currenthour>=12 && currenthour<=15){
+message="Good afternoon!";
+}
+else if (currenthour>=16 && currenthour<=22){
+message="Good evening!";
+}
+else if (currenthour>=23 || currenthour<=4){
+message="Good night!";
+}
+
+document.getElementById("Greetings").innerHTML=message+" the time is " +today.toLocaleString() ;
+}
+setInterval(getdatatime, 1000);
+function multiplyandsubmit(){
+var firstnum=parseFloat(document.getElementById("firstuserinput").value);
+var secondnum=parseFloat(document.getElementById("seconduserinput").value);
+var calculatedvalue=firstnum;
+calculatedvalue*=secondnum;
+document.getElementById("product").innerHTML="The calculated value is:- " + calculatedvalue;
+}
+function ParseFloat(str,val) {
+str = str.toString();
+str = str.slice(0, (str.indexOf(".")) + val + 1); 
+return Number(str);   
+}
+
+function table(){
+var onenumber=parseFloat(document.getElementById("inputfromuser").value);
+console.log(onenumber)
+var newnum=0
+document.getElementById("result").innerHTML="";
+for(var i=1; i<=10; i++){
+newnum=onenumber*i;
+var newnum2=newnum+"";
+newnum2=ParseFloat(newnum2,3)
+console.log(newnum2)
+
+document.getElementById("result").innerHTML+=newnum2 + ", ";
+}
+
+}
+
+console.log(ParseFloat("10.547892",2))
+function primenumchecker(){
+var usernum=parseInt(document.getElementById("usersinputtocheck").value);
+var num=0
+for(var i=2; i<usernum; i++){
+if (usernum%i==0){
+num++;
+}   
+}
+if(num>=1){
+document.getElementById("primeorcomposite").innerHTML="It is a composite number and it is divisble by " + num + " different numbers other than 1 and " + usernum;
+}
+else if (num==0){
+document.getElementById("primeorcomposite").innerHTML="It is a prime number";
+}
+}
+</script>
+<div class="fixed-container">
+<footer style="text-align:center;"><details>Made by Krishan Dhawan <summary>Copyright 2021:</summary></details></footer></div>
 </body>
