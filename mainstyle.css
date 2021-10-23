@@ -81,3 +81,14 @@ canvas{
 .slideshow img:nth-child(4){animation-delay: 15s;}
 .slideshow img:nth-child(5){animation-delay: 20s;}
 .slideshow img:nth-child(6){animation-delay: 25s;}
+
+.Chiefs img:hover{
+    margin: auto;
+    transform: scale(1.1);    
+    transition: 1s;
+}
+.Cricketteams img:hover{
+    margin:auto;
+    transform: skew(-45deg, 10deg);
+    transition: 2s;
+}
